@@ -36,6 +36,27 @@ body {
 	font-weight: 500 !important;
 	margin-left: 20px !important;
 	color: white !important;
+	position: relative;
+	transition: color 0.3s ease;
+}
+
+.navbar-link::after {
+	content: '';
+	position: absolute;
+	bottom: -5px;
+	left: 0;
+	width: 0;
+	height: 2px;
+	background: #ffbf35;
+	transition: width 0.3s ease;
+}
+
+.navbar-link:hover {
+	color: #ffbf35 !important;
+}
+
+.navbar-link:hover::after {
+	width: 100%;
 }
 
 .navbar {
@@ -81,8 +102,13 @@ body {
 	.navbar-link {
 		margin-left: 0 !important;
 		padding: 10px 0;
-		display: block;
-		width: 100%;
+		display: inline-block;
+		width: auto;
+	}
+	
+	.navbar-link::after {
+		bottom: 5px;
+		height: 1px;
 	}
 }
 
@@ -218,6 +244,19 @@ td {
 	text-align: center;
 	transition: all 0.3s ease;
 	border: 1px solid #333;
+	position: relative;
+	overflow: hidden;
+}
+
+.skill-card::before {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: -100%;
+	width: 100%;
+	height: 100%;
+	background: linear-gradient(90deg, transparent, rgba(255, 191, 53, 0.1), transparent);
+	transition: left 0.5s ease;
 }
 
 .skill-card:hover {
@@ -226,16 +265,33 @@ td {
 	border-color: #ffbf35;
 }
 
+.skill-card:hover::before {
+	left: 100%;
+}
+
+.skill-card:hover .skill-icon {
+	transform: scale(1.1) rotate(5deg);
+	color: #fff;
+	text-shadow: 0 0 20px #ffbf35;
+}
+
+.skill-card:hover h5 {
+	color: #ffbf35;
+	transform: scale(1.05);
+}
+
 .skill-icon {
 	font-size: 50px;
 	color: #ffbf35;
 	margin-bottom: 20px;
+	transition: all 0.3s ease;
 }
 
 .skill-card h5 {
 	color: #fff;
 	margin-bottom: 20px;
 	font-weight: 600;
+	transition: all 0.3s ease;
 }
 
 .skill-section-title {
@@ -271,12 +327,43 @@ td {
 	transition: all 0.3s ease;
 	border: 1px solid #333;
 	margin-bottom: 30px;
+	position: relative;
+}
+
+.project-card::before {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: -100%;
+	width: 100%;
+	height: 100%;
+	background: linear-gradient(90deg, transparent, rgba(255, 191, 53, 0.1), transparent);
+	transition: left 0.5s ease;
+	z-index: 1;
 }
 
 .project-card:hover {
 	transform: translateY(-10px);
 	box-shadow: 0 15px 30px rgba(255, 191, 53, 0.3);
 	border-color: #ffbf35;
+}
+
+.project-card:hover::before {
+	left: 100%;
+}
+
+.project-card:hover .project-image img {
+	transform: scale(1.1);
+}
+
+.project-card:hover .project-title {
+	color: #ffbf35;
+	transform: scale(1);
+}
+
+.project-card:hover .tech-tag {
+	transform: scale(1.05);
+	box-shadow: 0 2px 8px rgba(255, 191, 53, 0.3);
 }
 
 .project-image {
@@ -291,10 +378,13 @@ td {
 	width: 100%;
 	height: 100%;
 	object-fit: cover;
+	transition: transform 0.3s ease;
 }
 
 .project-content {
 	padding: 25px;
+	position: relative;
+	z-index: 2;
 }
 
 .project-title {
@@ -302,6 +392,7 @@ td {
 	font-size: 20px;
 	font-weight: 600;
 	margin-bottom: 15px;
+	transition: all 0.3s ease;
 }
 
 .project-description {
@@ -325,6 +416,7 @@ td {
 	font-weight: 500;
 	margin-right: 8px;
 	margin-bottom: 8px;
+	transition: all 0.3s ease;
 }
 
 .project-links {
@@ -363,6 +455,31 @@ td {
 	padding: 30px 10px;
 	background: #262626;
 	margin-bottom: 20px;
+	border-radius: 10px;
+	transition: all 0.3s ease;
+	position: relative;
+	overflow: hidden;
+}
+
+.experience-list::before {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: -100%;
+	width: 100%;
+	height: 100%;
+	background: linear-gradient(90deg, transparent, rgba(255, 191, 53, 0.1), transparent);
+	transition: left 0.5s ease;
+}
+
+.experience-list:hover {
+	transform: translateY(-5px);
+	box-shadow: 0 10px 25px rgba(255, 191, 53, 0.2);
+	border: 1px solid rgba(255, 191, 53, 0.3);
+}
+
+.experience-list:hover::before {
+	left: 100%;
 }
 
 .experience-content {
@@ -375,6 +492,12 @@ td {
 	font-weight: 600;
 	margin-bottom: 5px;
 	font-size: 20px;
+	transition: all 0.3s ease;
+}
+
+.experience-list:hover .experience-content h2 {
+	color: #ffbf35;
+	transform: scale(1);
 }
 
 .experience-content h3 {
@@ -540,6 +663,45 @@ td {
 	to {
 		opacity: 1;
 		transform: translateX(0);
+	}
+}
+
+@keyframes slideInLeft {
+	from {
+		opacity: 0;
+		transform: translateX(-50px);
+	}
+	to {
+		opacity: 1;
+		transform: translateX(0);
+	}
+}
+
+@keyframes slideInRight {
+	from {
+		opacity: 0;
+		transform: translateX(50px);
+	}
+	to {
+		opacity: 1;
+		transform: translateX(0);
+	}
+}
+
+@keyframes bounceIn {
+	0% {
+		opacity: 0;
+		transform: scale(0.3);
+	}
+	50% {
+		transform: scale(1.05);
+	}
+	70% {
+		transform: scale(0.9);
+	}
+	100% {
+		opacity: 1;
+		transform: scale(1);
 	}
 }
 
