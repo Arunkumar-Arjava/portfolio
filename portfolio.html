@@ -5,9 +5,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Portfolio</title>
+    <link rel="icon" href="image/logo.png">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <link rel="icon" href="image/logo.png">
+
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 
@@ -15,13 +16,12 @@
     <!-- Starting Nav bar section -->
     <nav class="navbar navbar-expand-lg fixed-top mb-5 bg-black">
         <div class="container">
-            <a class="navbar-brand logo" href="portfolio.html">
-                Port <span class="span-col">folio</span>
+            <a class="navbar-brand logo" href="index.html">
+                Port<span class="span-col">folio</span>
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation"
-                style="border-color: #ffbf35;">
-                <span class="navbar-toggler-icon"></span>
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation" style="border: none;">
+                <i id="navIcon" style="color: #ffbf35; font-size: 24px;"></i>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
@@ -31,8 +31,12 @@
                     <li class="nav-item">
                         <a class="nav-link navbar-link" href="#About">About Me</a>
                     </li>
+
                     <li class="nav-item">
-                        <a class="nav-link navbar-link" href="#skill">My Skills</a>
+                        <a class="nav-link navbar-link" href="#skills">Skills</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link navbar-link" href="#projects">Projects</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link navbar-link" href="#MyService">Education</a>
@@ -77,19 +81,19 @@
             </div>
 
             <div class="col-md-6 col-sm-6 col-12 text-center" id="photo">
-                <img src="image/my photo 1.jpg" alt="My Profile" class="img-fluid  rounded-circle mainImage" />
+                <img src="image/My-photo1_imresizer.jpg" alt="My Profile" class="img-fluid  rounded-circle mainImage" />
             </div>
         </div>
     </div>
     <!-- Ending Main banner Section -->
 
     <div class="container-fluid about bg-lightgrey" id="About">
-        <div class="container mt-5 about-us">
+        <div class="container about-us">
             <div class="row align-items-center">
 
                 <!-- Image Column -->
                 <div class="col-md-6 text-center d-none d-md-block">
-                    <img src="image/my photo 1.jpg" alt="My Profile" class="img-fluid rounded-circle about-img">
+                    <img src="image/My-photo1_imresizer.jpg" alt="My Profile" class="img-fluid rounded-circle about-img">
                 </div>
 
                 <!-- About Content -->
@@ -114,7 +118,8 @@
                                     </tr>
                                     <tr>
                                         <th>Email:</th>
-                                        <td><a href="mailto:arunkumar.msg26@gmail.com" style="text-decoration: none;color: white;">arunkumar.msg26@gmail.com</a>
+                                        <td><a href="mailto:arunkumar.msg26@gmail.com"
+                                                style="text-decoration: none;color: white;">arunkumar.msg26@gmail.com</a>
                                         </td>
                                     </tr>
                                     <tr>
@@ -133,7 +138,8 @@
                                 <tbody>
                                     <tr>
                                         <th>Phone:</th>
-                                        <td><a href="tel:6381689021" style="text-decoration: none;color: white;">6381689021</a></td>
+                                        <td><a href="tel:6381689021"
+                                                style="text-decoration: none;color: white;">6381689021</a></td>
                                     </tr>
                                     <tr>
                                         <th>City:</th>
@@ -145,100 +151,424 @@
                                     </tr>
                                     <tr>
                                         <th>Website:</th>
-                                        <td>www.Arunkumar.com</td>
+                                        <td><a href="https://arunkumar-arjava.github.io/portfolio/index.html"
+                                                style="text-decoration: none;color: white;">www.Arunkumar.com</a></td>
                                     </tr>
                                 </tbody>
                             </table>
                         </div>
                     </div>
 
+                    <!-- Resume Download Button -->
+                    <div class="mt-4">
+                        <a href="resume/Arunkumar_newResume.pdf" download="Arunkumar_newResume.pdf" class="btn btn-primary">
+                            <i class="fas fa-download"></i> Download Resume
+                        </a>
+                    </div>
+
                 </div>
             </div>
         </div>
     </div>
 
-    <div class="container  mb-5" id="skill">
-        <div class="row mt-5 mb-5">
-            <h2 className="heading-text" id="heading-text">My Skills</h2>
-            <div class="col-md-6 col-12">
-                <div class="skill">
-                    <b>Javascript</b>
-                    <span>80%</span>
-                    <div>
-                        <span style="width:80%"></span>
-                    </div>
-                </div>
-                <div class="skill">
-                    <b>OOPS</b>
-                    <span>91%</span>
-                    <div>
-                        <span style="width:91%"></span>
-                    </div>
-                </div>
-                <div class="skill">
-                    <b>Python</b>
-                    <span>85%</span>
-                    <div>
-                        <span style="width:85%"></span>
-                    </div>
-                </div>
-                <div class="skill">
-                    <b>Kotlin</b>
-                    <span>79%</span>
-                    <div>
-                        <span style="width:79%"></span>
-                    </div>
-                </div>
+    <div class="container-fluid" id="skills">
+        <div class="container py-5">
+            <h2 class="heading-text text-center mb-5">My Skills</h2>
 
-                <div class="skill">
-                    <b>React JS</b>
-                    <span>80%</span>
-                    <div>
-                        <span style="width:80%"></span>
+            <!-- Web Development Section -->
+            <div class="row mb-5">
+                <div class="col-12">
+                    <h3 class="skill-section-title">Web Development</h3>
+                </div>
+                <div class="col-md-3 col-6 mb-4">
+                    <div class="skill-card">
+                        <i class="fab fa-html5 skill-icon"></i>
+                        <h5>HTML5</h5>
+                    </div>
+                </div>
+                <div class="col-md-3 col-6 mb-4">
+                    <div class="skill-card">
+                        <i class="fab fa-css3-alt skill-icon"></i>
+                        <h5>CSS3</h5>
+                    </div>
+                </div>
+                <div class="col-md-3 col-6 mb-4">
+                    <div class="skill-card">
+                        <i class="fab fa-js-square skill-icon"></i>
+                        <h5>JavaScript</h5>
+                    </div>
+                </div>
+                <div class="col-md-3 col-6 mb-4">
+                    <div class="skill-card">
+                        <i class="fab fa-react skill-icon"></i>
+                        <h5>React JS</h5>
                     </div>
                 </div>
             </div>
-            <div class="col-md-6 col-12">
-                <div class="container">
-                    <div class="row mt-5">
-                        <div class="col-6 d-flex justify-content-center">
 
-                            <div role="progressbar" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100"
-                                style="--value:95">
-                                Html-95</div>
 
+
+            <!-- Android Development Section -->
+            <div class="row">
+                <div class="col-12">
+                    <h3 class="skill-section-title">Android Development</h3>
+                </div>
+                <div class="col-md-3 col-6 mb-4">
+                    <div class="skill-card">
+                        <i class="fab fa-android skill-icon"></i>
+                        <h5>Android</h5>
+                    </div>
+                </div>
+                <div class="col-md-3 col-6 mb-4">
+                    <div class="skill-card">
+                        <i class="fab fa-java skill-icon"></i>
+                        <h5>Java</h5>
+                    </div>
+                </div>
+                <div class="col-md-3 col-6 mb-4">
+                    <div class="skill-card">
+                        <i class="fas fa-code skill-icon"></i>
+                        <h5>Kotlin</h5>
+                    </div>
+                </div>
+                <div class="col-md-3 col-6 mb-4">
+                    <div class="skill-card">
+                        <i class="fab fa-google skill-icon"></i>
+                        <h5>Flutter</h5>
+                    </div>
+                </div>
+            </div>
+            <!-- Database Section -->
+            <div class="row mb-5">
+                <div class="col-12">
+                    <h3 class="skill-section-title">Database & API</h3>
+                </div>
+                <div class="col-md-3 col-6 mb-4">
+                    <div class="skill-card">
+                        <i class="fas fa-database skill-icon"></i>
+                        <h5>SQL</h5>
+                    </div>
+                </div>
+                <div class="col-md-3 col-6 mb-4">
+                    <div class="skill-card">
+                        <i class="fas fa-leaf skill-icon"></i>
+                        <h5>MongoDB</h5>
+                    </div>
+                </div>
+                <div class="col-md-3 col-6 mb-4">
+                    <div class="skill-card">
+                        <i class="fas fa-plug skill-icon"></i>
+                        <h5>JavaScript API</h5>
+                    </div>
+                </div>
+                <div class="col-md-3 col-6 mb-4">
+                    <div class="skill-card">
+                        <i class="fab fa-python skill-icon"></i>
+                        <h5>Python FastAPI</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid" id="projects">
+        <div class="container py-5">
+            <h2 class="heading-text text-center mb-5">My Projects</h2>
+            
+            <!-- Web Applications Section -->
+            <h3 class="skill-section-title mb-4">Web Applications</h3>
+            <div class="row">
+                <div class="col-md-6 col-lg-4 mb-4">
+                    <div class="project-card">
+                        <div class="project-image">
+                            <img src="image/project-images/static webside2.jpeg" alt="Static Website">
                         </div>
-                        <div class="col-6 d-flex justify-content-center">
-                            <div role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"
-                                style="--value:85">
-                                CSS-85</div>
-
-
+                        <div class="project-content">
+                            <h3 class="project-title">Bharath Website</h3>
+                            <p class="project-description">This is my first static website built with HTML, CSS, and
+                                Bootstrap featuring clean design and user-friendly interface.</p>
+                            <div class="project-tech">
+                                <span class="tech-tag">HTML</span>
+                                <span class="tech-tag">CSS</span>
+                                <span class="tech-tag">bootstrap</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://arunkavitha1982.github.io/bharath_clg/bharath_home.html"
+                                    class="project-link">Live Demo</a>
+                                <a href="#" class="project-link">GitHub</a>
+                            </div>
                         </div>
                     </div>
-                    <div class="row">
-                        <div class="col-6 d-flex justify-content-center">
-
-                            <div role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"
-                                style="--value:80">
-                                SQL-80</div>
+                </div>
+                <div class="col-md-6 col-lg-4 mb-4">
+                    <div class="project-card">
+                        <div class="project-image">
+                            <img src="image/project-images/static webside.jpeg" alt="Static Website">
                         </div>
-                        <div class="col-6 d-flex justify-content-center">
-                            <div role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"
-                                style="--value:85">
-                                Dart-85</div>
+                        <div class="project-content">
+                            <h3 class="project-title">PGM Air condenser</h3>
+                            <p class="project-description">A professional business website for PGM Air Condenser company
+                                showcasing products and services with modern design.</p>
+                            <div class="project-tech">
+                                <span class="tech-tag">HTML</span>
+                                <span class="tech-tag">CSS</span>
+                                <span class="tech-tag">bootstrap</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://arunkavitha1982.github.io/PGM-product/index.html"
+                                    class="project-link">Live Demo</a>
+                                <a href="#" class="project-link">GitHub</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 mb-4">
+                    <div class="project-card">
+                        <div class="project-image">
+                            <img src="image/project-images/web-App.jpeg" alt="Web Application">
+                        </div>
+                        <div class="project-content">
+                            <h3 class="project-title">Web Application</h3>
+                            <p class="project-description">An interactive web application featuring dynamic content,
+                                user interactions, and modern JavaScript functionality.</p>
+                            <div class="project-tech">
+                                <span class="tech-tag">JavaScript</span>
+                                <span class="tech-tag">Node.js</span>
+                                <span class="tech-tag">CSS</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://arunkavitha1982.github.io/pgm_webApp/index.html"
+                                    class="project-link">Live Demo</a>
+                                <a href="#" class="project-link">GitHub</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-6 col-lg-4 mb-4">
+                    <div class="project-card">
+                        <div class="project-image">
+                            <img src="image/project-images/react-webApp.jpeg" alt="React Website 2">
+                        </div>
+                        <div class="project-content">
+                            <h3 class="project-title">Tic Tac Toe</h3>
+                            <p class="project-description">A classic Tic Tac Toe game built with React featuring
+                                interactive gameplay and state management.</p>
+                            <div class="project-tech">
+                                <span class="tech-tag">React</span>
+                                <span class="tech-tag">Redux</span>
+                                <span class="tech-tag">API</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="#" class="project-link">Live Demo</a>
+                                <a href="#" class="project-link">GitHub</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 mb-4">
+                    <div class="project-card">
+                        <div class="project-image">
+                            <img src="image/project-images/web-App3.jpeg" alt="Web App 3">
+                        </div>
+                        <div class="project-content">
+                            <h3 class="project-title">Guess the number game</h3>
+                            <p class="project-description">An engaging number guessing game with interactive feedback
+                                and score tracking system.</p>
+                            <div class="project-tech">
+                                <span class="tech-tag">HTML</span>
+                                <span class="tech-tag">CSS</span>
+                                <span class="tech-tag">JavaScript</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="#" class="project-link">Live Demo</a>
+                                <a href="#" class="project-link">GitHub</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 mb-4">
+                    <div class="project-card">
+                        <div class="project-image">
+                            <img src="image/project-images/web-App2.jpeg" alt="Web App 2">
+                        </div>
+                        <div class="project-content">
+                            <h3 class="project-title">Calculator</h3>
+                            <p class="project-description">A scientific calculator web application with advanced
+                                mathematical functions and user-friendly interface.</p>
+                            <div class="project-tech">
+                                <span class="tech-tag">HTML</span>
+                                <span class="tech-tag">CSS</span>
+                                <span class="tech-tag">JavaScript</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://arunkavitha1982.github.io/javaScript/scientific_calculator.html"
+                                    class="project-link">Live Demo</a>
+                                <a href="#" class="project-link">GitHub</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
+                <div class="col-md-6 col-lg-4 mb-4">
+                    <div class="project-card">
+                        <div class="project-image">
+                            <img src="image/project-images/web-App4.jpeg.png" alt="Web App 4">
+                        </div>
+                        <div class="project-content">
+                            <h3 class="project-title">Rock paper scissor </h3>
+                            <p class="project-description">A Rock Paper Scissors web application with advanced
+                                game functions and user-friendly interface.</p>
+                            <div class="project-tech">
+                                <span class="tech-tag">HTML</span>
+                                <span class="tech-tag">CSS</span>
+                                <span class="tech-tag">JavaScript</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://arunkavitha1982.github.io/javaScript/rock_paper_scissors.html"
+                                    class="project-link">Live Demo</a>
+                                <a href="#" class="project-link">GitHub</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4 mb-4">
+                    <div class="project-card">
+                        <div class="project-image">
+                            <img src="image/project-images/leedcode.jpeg" alt="LeetCode Solutions">
+                        </div>
+                        <div class="project-content">
+                            <h3 class="project-title">LeetCode Solutions</h3>
+                            <p class="project-description">A comprehensive collection of LeetCode problem solutions with
+                                optimized algorithms and detailed explanations.</p>
+                            <div class="project-tech">
+                                <span class="tech-tag">Java</span>
+                                <span class="tech-tag">Database</span>
+                                <span class="tech-tag">Data Structures</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://leetcode.com/u/arunkumar2005/" class="project-link">View Solutions</a>
+                                <a href="#" class="project-link">GitHub</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 mb-4">
+                    <div class="project-card">
+                        <div class="project-image">
+                            <img src="image/project-images/goddard.png" alt="Goddard School">
+                        </div>
+                        <div class="project-content">
+                            <h3 class="project-title">Goddard School</h3>
+                            <p class="project-description">A frontend web application for Goddard School featuring modern UI design and responsive layout.</p>
+                            <div class="project-tech">
+                                <span class="tech-tag">React</span>
+                                <span class="tech-tag">JavaScript</span>
+                                <span class="tech-tag">Tailwind CSS</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="#" class="project-link">Live Demo</a>
+                                <a href="#" class="project-link">GitHub</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 mb-4">
+                    <div class="project-card">
+                        <div class="project-image">
+                            <img src="image/project-images/kadaikutty.png" alt="Kadaikutty Web App">
+                        </div>
+                        <div class="project-content">
+                            <h3 class="project-title">Kadaikutty</h3>
+                            <p class="project-description">A full-stack web application built with React frontend, Express.js backend, and MySQL database integration.</p>
+                            <div class="project-tech">
+                                <span class="tech-tag">React</span>
+                                <span class="tech-tag">Express.js</span>
+                                <span class="tech-tag">MySQL</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="#" class="project-link">Live Demo</a>
+                                <a href="#" class="project-link">GitHub</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Mobile Applications Section -->
+            <h3 class="skill-section-title mb-4 mt-5">Mobile Applications</h3>
+            <div class="row">
+                <div class="col-md-6 col-lg-4 mb-4">
+                    <div class="project-card">
+                        <div class="project-image">
+                            <img src="image/project-images/android-1.jpeg" alt="Android App 1">
+                        </div>
+                        <div class="project-content">
+                            <h3 class="project-title">Roll dies game</h3>
+                            <p class="project-description">A fun dice rolling game for Android with interactive
+                                animations and random number generation.</p>
+                            <div class="project-tech">
+                                <span class="tech-tag">Kotlin</span>
+                                <span class="tech-tag">Android</span>
+                                <span class="tech-tag">SQLite</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://www.linkedin.com/posts/arun-kumar-862981293_androidappdevelopment-kotlin-activity-7183069936624304128-Ocqh?utm_source=share&utm_medium=member_android&rcm=ACoAAEcoL4oBpkLAInPoBfdsGAZMFHNoCZzx5Ko"
+                                    class="project-link" target="_blank">View Demo</a>
+                                <a href="#" class="project-link">GitHub</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 mb-4">
+                    <div class="project-card">
+                        <div class="project-image">
+                            <img src="image/project-images/android-2.jpeg" alt="Android App 2">
+                        </div>
+                        <div class="project-content">
+                            <h3 class="project-title">Calculator</h3>
+                            <p class="project-description">A fully functional calculator app for Android with basic and
+                                advanced mathematical operations.</p>
+                            <div class="project-tech">
+                                <span class="tech-tag">Kotlin</span>
+                                <span class="tech-tag">Android</span>
+                                <span class="tech-tag">Firebase</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://www.linkedin.com/posts/arun-kumar-862981293_androidappdevelopment-kotlin-activity-7179188736608411648-PuR6?utm_source=share&utm_medium=member_android&rcm=ACoAAEcoL4oBpkLAInPoBfdsGAZMFHNoCZzx5Ko" class="project-link" target="_blank">View Demo</a>
+                                <a href="#" class="project-link">GitHub</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 mb-4">
+                    <div class="project-card">
+                        <div class="project-image">
+                            <img src="image/project-images/android-3.jpeg" alt="Android App 3">
+                        </div>
+                        <div class="project-content">
+                            <h3 class="project-title">Rock paper scissor</h3>
+                            <p class="project-description">A classic Rock Paper Scissors game for Android with
+                                interactive gameplay and score tracking.</p>
+                            <div class="project-tech">
+                                <span class="tech-tag">Kotlin</span>
+                                <span class="tech-tag">Java</span>
+                                <span class="tech-tag">Android</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://www.linkedin.com/posts/arun-kumar-862981293_i-successfully-created-my-rock-paper-scissors-activity-7178803993584828416-3gKq?utm_source=share&utm_medium=member_android&rcm=ACoAAEcoL4oBpkLAInPoBfdsGAZMFHNoCZzx5Ko" class="project-link" target="_blank">View Demo</a>
+                                <a href="#" class="project-link">GitHub</a>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-
     </div>
 
-
-    <div class="main-section container-fluid bg-lightgrey mt-5" id="MyService">
-        <h2 class="heading-text text-center">My Education &amp; My Experience</h2>
+    <div class="main-section container-fluid bg-lightgrey" id="MyService">
+        <h2 class="heading-text text-center">My Service &amp; My Experience</h2>
         <div class="container">
             <div class="row">
                 <!-- Education Column -->
@@ -271,7 +601,7 @@
                     <div class="experience-list">
                         <div class="experience-content">
                             <h2>Arjava Tech</h2>
-                            <h3>2024-2025</h3>
+                            <h3>2024-Current</h3>
                             <p>Front End Developer</p>
                         </div>
                     </div>
@@ -287,7 +617,7 @@
             <div class="row">
 
                 <!-- Mentor 1 -->
-                <div class="col-md-4 col-12">
+                <div class="col-md-3 col-12">
                     <div class="testimonial">
                         <div class="testimonial-content">
                             <div class="testimonial-img">
@@ -308,7 +638,7 @@
                 </div>
 
                 <!-- Mentor 2 -->
-                <div class="col-md-4 col-12">
+                <div class="col-md-3 col-12">
                     <div class="testimonial">
                         <div class="testimonial-content">
                             <div class="testimonial-img">
@@ -329,16 +659,18 @@
                 </div>
 
                 <!-- Mentor 3 -->
-                <div class="col-md-4 col-12">
+                <div class="col-md-3 col-12">
                     <div class="testimonial">
                         <div class="testimonial-content">
                             <div class="testimonial-img">
                                 <img src="image/marimuthu.png" alt="Mr. Marimuthu">
                             </div>
                             <i class="fa fa-quote-left"></i>
-                            <p id="content">He is working as a Tamil teacher in a tribal higher secondary school located
+                            <p id="content">He is working as a dedicated Tamil teacher in a tribal higher secondary
+                                school located
                                 in Kargudi,
-                                Nilgiri district. He worked as a Head Master for two years. He is also helping the
+                                Nilgiri district. He worked as a Head Master for two years. He is also passionately
+                                helping the
                                 students in that
                                 school for their higher studies.</p>
                             <div class="testimonial-name">
@@ -349,65 +681,235 @@
                     </div>
                 </div>
 
+                <!-- Mentor 4 -->
+                <div class="col-md-3 col-12">
+                    <div class="testimonial">
+                        <div class="testimonial-content">
+                            <div class="testimonial-img">
+                                <img src="image/Mani-anna.jpg" alt="Dr. Rajesh">
+                            </div>
+                            <i class="fa fa-quote-left"></i>
+                            <p id="content">Mr. Mani is my best teacher and mentor who has guided me throughout my
+                                learning journey. His exceptional teaching methods helped me develop strong programming
+                                skills and confidence in software development.</p>
+                            <div class="testimonial-name">
+                                <h5>Mr. Mani</h5>
+                                <p>Senior Software Engineer, Arjava</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
             </div>
         </div>
     </div>
 
 
-    <div class="container-fluid bg-lightgrey contact" id="contact">
+    <div class="container-fluid contact" id="contact">
         <h2 class="heading-text text-center">Get In Touch</h2>
-    
-        <form>
-          <input type="text" placeholder="Full Name..." required />
-          <input type="email" placeholder="Full Email Id..." required />
-          <input type="tel" placeholder="Full Mobile No..." required />
-          <textarea placeholder="Enter Address..." required></textarea>
-          <button type="submit">Submit</button>
-        </form>
-    
-        <div class="row mt-5">
-    
-          <!-- Address -->
-          <div class="col-md-4 col-12 text-center">
-            <h3>
-              <a href="https://maps.app.goo.gl/wK3HjrvPD73wLuLZ7" target="_blank" rel="noopener noreferrer">
-                <i class="fa fa-map-marker" style="color: #ffbf35"></i>
-              </a>
-            </h3>
-            <h4>Address</h4>
-            <p style="color: white;">5/274, Group House, Masinagudi, The Nilgiris, Tamilnadu, 643223.</p>
-          </div>
-    
-          <!-- Phone -->
-          <div class="col-md-4 col-12 text-center">
-            <h3>
-              <a href="tel:6381689021">
-                <i class="fa fa-phone" style="color: #ffbf35"></i>
-              </a>
-            </h3>
-            <h4>Phone</h4>
-            <p><a href="tel:6381689021" style="color: white; text-decoration: none;">6381689021</a></p>
-          </div>
-    
-          <!-- Email -->
-          <div class="col-md-4 col-12 text-center">
-            <h3>
-              <a href="mailto:arunkumar.msg26@gmail.com">
-                <i class="fa fa-envelope" style="color: #ffbf35;"></i>
-              </a>
-            </h3>
-            <h4>Email</h4>
-            <p><a href="mailto:arunkumar.msg26@gmail.com" style="color: white; text-decoration: none;">arunkumar.msg26@gmail.com</a></p>
-          </div>
-    
+        
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <form id="contactForm">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <input type="text" name="from_name" placeholder="Full Name" required />
+                            </div>
+                            <div class="col-md-6">
+                                <input type="email" name="from_email" placeholder="Email Address" required />
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <input type="tel" name="phone" placeholder="Phone Number" required />
+                            </div>
+                            <div class="col-md-6">
+                                <input type="text" name="subject" placeholder="Subject" required />
+                            </div>
+                        </div>
+                        <textarea name="message" placeholder="Your Message" required></textarea>
+                        <button type="submit">Send Message</button>
+                    </form>
+                </div>
+            </div>
         </div>
-      </div>
+
+        <div class="row mt-5">
+
+            <!-- Address -->
+            <div class="col-md-4 col-12 text-center">
+                <h3>
+                    <a href="https://maps.app.goo.gl/wK3HjrvPD73wLuLZ7" target="_blank" rel="noopener noreferrer">
+                        <i class="fa fa-map-marker" style="color: #ffbf35"></i>
+                    </a>
+                </h3>
+                <h4>Address</h4>
+                <p style="color: white;">5/274, Group House, Masinagudi, The Nilgiris, Tamilnadu, 643223.</p>
+            </div>
+
+            <!-- Phone -->
+            <div class="col-md-4 col-12 text-center">
+                <h3>
+                    <a href="tel:6381689021">
+                        <i class="fa fa-phone" style="color: #ffbf35"></i>
+                    </a>
+                </h3>
+                <h4>Phone</h4>
+                <p><a href="tel:6381689021" style="color: white; text-decoration: none;">6381689021</a></p>
+            </div>
+
+            <!-- Email -->
+            <div class="col-md-4 col-12 text-center">
+                <h3>
+                    <a href="mailto:arunkumar.msg26@gmail.com">
+                        <i class="fa fa-envelope" style="color: #ffbf35;"></i>
+                    </a>
+                </h3>
+                <h4>Email</h4>
+                <p><a href="mailto:arunkumar.msg26@gmail.com"
+                        style="color: white; text-decoration: none;">arunkumar.msg26@gmail.com</a></p>
+            </div>
+
+        </div>
+    </div>
 
 
 
 
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script>
+        // Initialize EmailJS
+        emailjs.init('dSkAlxEIgTHnDgky5');
+
+        // Handle form submission
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const btn = this.querySelector('button[type="submit"]');
+            btn.textContent = 'Sending...';
+            btn.disabled = true;
+            
+            emailjs.sendForm('service_f54axr8', 'template_7sb4w0j', this)
+                .then(function() {
+                    alert('Message sent successfully!');
+                    document.getElementById('contactForm').reset();
+                }, function(error) {
+                    alert('Failed to send message. Please try again.');
+                    console.error('EmailJS error:', error);
+                })
+                .finally(function() {
+                    btn.textContent = 'Send Message';
+                    btn.disabled = false;
+                });
+        });
+
+        document.addEventListener('DOMContentLoaded', function () {
+            const skillCards = document.querySelectorAll('.skill-card');
+            const projectCards = document.querySelectorAll('.project-card');
+            const experienceItems = document.querySelectorAll('.experience-list');
+            const testimonials = document.querySelectorAll('.testimonial');
+            const aboutElements = document.querySelectorAll('.about-us h2, .about-us h5, .about-us p, .about-img, .about-us table');
+            const skillElements = document.querySelectorAll('#skills .heading-text, .skill-section-title, .skill-card');
+            const projectElements = document.querySelectorAll('#projects .heading-text, .project-card');
+            const experienceElements = document.querySelectorAll('#MyService .heading-text, .experience-list');
+            const mentorElements = document.querySelectorAll('#Mentors .heading-text, .testimonial');
+            const contactElements = document.querySelectorAll('#contact .heading-text, .contact form, .contact .row');
+
+            aboutElements.forEach(el => el.classList.add('about-animate'));
+            skillElements.forEach(el => el.classList.add('skill-animate'));
+            projectElements.forEach(el => el.classList.add('project-animate'));
+            experienceElements.forEach(el => el.classList.add('experience-animate'));
+            mentorElements.forEach(el => el.classList.add('mentor-animate'));
+            contactElements.forEach(el => el.classList.add('contact-animate'));
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        let delay = 0;
+                        if (entry.target.classList.contains('skill-card')) {
+                            const index = Array.from(skillCards).indexOf(entry.target);
+                            delay = index * 150;
+                            // Add different animation styles for skill cards
+                            const animationTypes = ['bounceIn', 'slideInLeft', 'slideInRight', 'fadeInUp'];
+                            const animationType = animationTypes[index % 4];
+                            entry.target.style.animation = `${animationType} 0.8s ease-out ${delay}ms both`;
+                            return; // Skip the default setTimeout
+                        } else if (entry.target.classList.contains('project-card')) {
+                            const index = Array.from(projectCards).indexOf(entry.target);
+                            delay = index * 200;
+                            // Add different animation styles for project cards
+                            const animationTypes = ['fadeInUp', 'slideInLeft', 'slideInRight', 'bounceIn'];
+                            const animationType = animationTypes[index % 4];
+                            entry.target.style.animation = `${animationType} 0.8s ease-out ${delay}ms both`;
+                            return; // Skip the default setTimeout
+                        } else if (entry.target.classList.contains('experience-list')) {
+                            const index = Array.from(experienceItems).indexOf(entry.target);
+                            delay = index * 300;
+                            // Add different animation styles for left and right columns
+                            if (index % 2 === 0) {
+                                entry.target.style.animation = `slideInLeft 0.8s ease-out ${delay}ms both`;
+                            } else {
+                                entry.target.style.animation = `slideInRight 0.8s ease-out ${delay}ms both`;
+                            }
+                            return; // Skip the default setTimeout
+                        } else if (entry.target.classList.contains('testimonial')) {
+                            const index = Array.from(testimonials).indexOf(entry.target);
+                            delay = index * 250;
+                            // Add different animation styles for testimonials
+                            const animationTypes = ['bounceIn', 'fadeInUp', 'slideInLeft', 'slideInRight'];
+                            const animationType = animationTypes[index % 4];
+                            entry.target.style.animation = `${animationType} 0.8s ease-out ${delay}ms both`;
+                            return; // Skip the default setTimeout
+                        }
+                        if (!entry.target.classList.contains('experience-list') && !entry.target.classList.contains('skill-card') && !entry.target.classList.contains('project-card') && !entry.target.classList.contains('testimonial')) {
+                            setTimeout(() => {
+                                entry.target.classList.add('animate');
+                            }, delay);
+                        }
+                    }
+                });
+            }, { threshold: 0.1 });
+
+            aboutElements.forEach(el => observer.observe(el));
+            skillElements.forEach(el => observer.observe(el));
+            projectElements.forEach(el => observer.observe(el));
+            experienceElements.forEach(el => observer.observe(el));
+            mentorElements.forEach(el => observer.observe(el));
+            contactElements.forEach(el => observer.observe(el));
+
+            const navToggler = document.querySelector('.navbar-toggler');
+            const navCollapse = document.querySelector('.navbar-collapse');
+            const navIcon = document.getElementById('navIcon');
+
+            navIcon.className = 'fas fa-bars';
+
+            navToggler.addEventListener('click', function () {
+                if (navIcon.classList.contains('fa-bars')) {
+                    navIcon.className = 'fas fa-xmark';
+                } else {
+                    navIcon.className = 'fas fa-bars';
+                }
+            });
+
+            document.addEventListener('click', function (e) {
+                if (!navCollapse.contains(e.target) && !navToggler.contains(e.target) && navCollapse.classList.contains('show')) {
+                    navToggler.click();
+                }
+            });
+
+            document.querySelectorAll('.navbar-link').forEach(link => {
+                link.addEventListener('click', function () {
+                    if (navCollapse.classList.contains('show')) {
+                        navToggler.click();
+                    }
+                });
+            });
+
+        });
+    </script>
 </body>
 
 </html>
