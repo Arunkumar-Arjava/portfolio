@@ -1,160 +1,199 @@
 %-------------------------
-% Professional Resume in LaTeX
-% Author : Arun Kumar
-% Based off of: https://github.com/sb2nov/resume
-% License : MIT
-%------------------------
+  % Resume in Latex
+  % Author : Jake Gutierrez
+  % Based off of: https://github.com/sb2nov/resume
+  % License : MIT
+  %------------------------
 
-\documentclass[letterpaper,11pt]{article}
+  \documentclass[letterpaper,11pt]{article}
 
-\usepackage{latexsym}
-\usepackage[empty]{fullpage}
-\usepackage{titlesec}
-\usepackage{marvosym}
-\usepackage[usenames,dvipsnames]{color}
-\usepackage{verbatim}
-\usepackage{enumitem}
-\usepackage[hidelinks]{hyperref}
-\usepackage{fancyhdr}
-\usepackage[english]{babel}
-\usepackage{tabularx}
-\input{glyphtounicode}
+  \usepackage{latexsym}
+  \usepackage[empty]{fullpage}
+  \usepackage{titlesec}
+  \usepackage{marvosym}
+  \usepackage[usenames,dvipsnames]{color}
+  \usepackage{verbatim}
+  \usepackage{enumitem}
+  \usepackage[hidelinks]{hyperref}
+  \usepackage{fancyhdr}
+  \usepackage[english]{babel}
+  \usepackage{tabularx}
+  \input{glyphtounicode}
 
-\pagestyle{fancy}
-\fancyhf{}
-\fancyfoot{}
-\renewcommand{\headrulewidth}{0pt}
-\renewcommand{\footrulewidth}{0pt}
 
-% Adjust margins
-\addtolength{\oddsidemargin}{-0.5in}
-\addtolength{\evensidemargin}{-0.5in}
-\addtolength{\textwidth}{1in}
-\addtolength{\topmargin}{-.5in}
-\addtolength{\textheight}{1.0in}
+  %----------FONT OPTIONS----------
+  % sans-serif
+  % \usepackage[sfdefault]{FiraSans}
+  % \usepackage[sfdefault]{roboto}
+  % \usepackage[sfdefault]{noto-sans}
+  % \usepackage[default]{sourcesanspro}
 
-\urlstyle{same}
+  % serif
+  % \usepackage{CormorantGaramond}
+  % \usepackage{charter}
 
-\raggedbottom
-\raggedright
-\setlength{\tabcolsep}{0in}
 
-% Sections formatting
-\titleformat{\section}{
-  \vspace{-4pt}\scshape\raggedright\large
-}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+  \pagestyle{fancy}
+  \fancyhf{} % clear all header and footer fields
+  \fancyfoot{}
+  \renewcommand{\headrulewidth}{0pt}
+  \renewcommand{\footrulewidth}{0pt}
 
-% Ensure that generate pdf is machine readable/ATS parsable
-\pdfgentounicode=1
+  % Adjust margins
+  \addtolength{\oddsidemargin}{-0.5in}
+  \addtolength{\evensidemargin}{-0.5in}
+  \addtolength{\textwidth}{1in}
+  \addtolength{\topmargin}{-.5in}
+  \addtolength{\textheight}{1.0in}
 
-%-------------------------
-% Custom commands
-\newcommand{\resumeItem}[1]{
-  \item\small{
-    {#1 \vspace{-2pt}}
+  \urlstyle{same}
+
+  \raggedbottom
+  \raggedright
+  \setlength{\tabcolsep}{0in}
+
+  % Sections formatting
+  \titleformat{\section}{
+    \vspace{-4pt}\scshape\raggedright\large
+  }{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+  % Ensure that generate pdf is machine readable/ATS parsable
+  \pdfgentounicode=1
+
+  %-------------------------
+  % Custom commands
+  \newcommand{\resumeItem}[1]{
+    \item\small{
+      {#1 \vspace{-2pt}}
+    }
   }
-}
 
-\newcommand{\resumeSubheading}[4]{
-  \vspace{-2pt}\item
-    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
-      \textbf{#1} & #2 \\
-      \textit{\small#3} & \textit{\small #4} \\
-    \end{tabular*}\vspace{-7pt}
-}
+  \newcommand{\resumeSubheading}[4]{
+    \vspace{-2pt}\item
+      \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+        \textbf{#1} & #2 \\
+        \textit{\small#3} & \textit{\small #4} \\
+      \end{tabular*}\vspace{-7pt}
+  }
 
-\newcommand{\resumeProjectHeading}[2]{
-    \item
-    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
-      \small#1 & #2 \\
-    \end{tabular*}\vspace{-7pt}
-}
+  \newcommand{\resumeSubSubheading}[2]{
+      \item
+      \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+        \textit{\small#1} & \textit{\small #2} \\
+      \end{tabular*}\vspace{-7pt}
+  }
 
-\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+  \newcommand{\resumeProjectHeading}[2]{
+      \item
+      \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+        \small#1 & #2 \\
+      \end{tabular*}\vspace{-7pt}
+  }
 
-\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+  \newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
 
-\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
-\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
-\newcommand{\resumeItemListStart}{\begin{itemize}}
-\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+  \renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
 
-%-------------------------------------------
-%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  \newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+  \newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+  \newcommand{\resumeItemListStart}{\begin{itemize}}
+  \newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
 
-
-\begin{document}
-
-%----------HEADING----------
-\begin{center}
-    \textbf{\Huge \scshape Arun Kumar} \\ \vspace{1pt}
-    \textbf{\large Frontend Developer \& Full-Stack Engineer} \\ \vspace{1pt}
-    \small 6380134086 $|$ \href{mailto:arunkumar.msg26@gmail.com}{\underline{arunkumar.msg26@gmail.com}} $|$ 
-    \href{https://www.linkedin.com/in/arun-kumar-862981293}{\underline{LinkedIn}} $|$
-    \href{https://github.com/arunkavitha1982}{\underline{GitHub}}
-\end{center}
+  %-------------------------------------------
+  %%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
-%-----------SUMMARY-----------
-\section{Professional Summary}
-  \small{Frontend Developer with 1+ year of experience crafting responsive web applications using ReactJS, JavaScript, and Node.js. Proficient in modern AI tools (Claude AI, Cursor AI, Magic Patterns) and cloud platforms (Supabase, Render). Enhanced application performance by 20\%, resolved 100+ algorithmic challenges, and delivered scalable solutions with 99\% uptime. Skilled in full-stack development, UI/UX design with Shadcn UI, and form automation utilizing Fillout.}
+  \begin{document}
+
+  %----------HEADING----------
+  \begin{center}
+      \textbf{\Huge \scshape Arun Kumar} \\ \vspace{1pt}
+      \small 6380134086 $|$ \href{mailto:arunkumar.msg@gmail.com}{\underline{arunkumar.msg26@gmail.com}} $|$ 
+      \href{https://www.linkedin.com/in/arun-kumar-862981293}{\underline{LinkedIn}} $|$
+      \href{https://arunkumar-arjava.github.io/portfolio/index.html}{\underline{Portfolio}}
 
 
-%-----------EDUCATION-----------
-\section{Education}
-  \resumeSubHeadingListStart
-    \resumeSubheading
-      {Bharath University}{Chennai, India}
-      {Bachelor of Computer Applications (BCA)}{Expected 2026}
-  \resumeSubHeadingListEnd
+  %-----------SUMMARY-----------
+  \section{Summary}
+    \small{Frontend Developer with 1+ year of professional experience building modern web applications with ReactJS, JavaScript, and Node.js. Accelerated page load times by 20\% and resolved 100+ algorithmic challenges across data structures, trees, and graphs.}
 
 
-%-----------EXPERIENCE-----------
-\section{Professional Experience}
-  \resumeSubHeadingListStart
-    \resumeSubheading
-      {Frontend Developer}{July 2024 -- Present}
-      {Arjava Technologies}{Remote}
-      \resumeItemListStart
-        \resumeItem{Engineered 5+ responsive web applications using ReactJS, Tailwind CSS, and Shadcn UI, serving 1000+ daily users}
-        \resumeItem{Leveraged AI tools (Claude AI, Cursor AI, Magic Patterns) to accelerate development and elevate code quality}
-        \resumeItem{Integrated cloud databases (Supabase, Render) and deployed RESTful APIs, reducing data loading time by 30\%}
-        \resumeItem{Architected automated forms using Fillout and established real-time features with WebSocket}
-      \resumeItemListEnd
-  \resumeSubHeadingListEnd
+  %-----------EDUCATION-----------
+  \section{Education}
+    \resumeSubHeadingListStart
+      \resumeSubheading
+        {Bharath University}{Chennai, India}
+        {Bachelor of Computer Applications (BCA)}{Expected 2026}
+    \resumeSubHeadingListEnd
 
 
-%-----------PROJECTS-----------
-\section{Featured Projects}
-\resumeItemListStart
-  \resumeItem{\textbf{Goddard School Platform} -- Full-stack React application with Supabase backend for student enrollment management and automated form workflows using Fillout}
-  \resumeItem{\textbf{Kadaikutty Web App} -- Full-stack application built with React, Express.js, and MySQL featuring real-time capabilities}
-  \resumeItem{\textbf{Portfolio Website} -- Responsive portfolio leveraging ReactJS and Tailwind CSS showcasing 12+ projects with SEO optimization}
-  \resumeItem{\textbf{Android Apps \& Games} -- Engineered mobile applications using Kotlin with Firebase and SQLite; created interactive games with advanced algorithms}
-\resumeItemListEnd
+  %-----------EXPERIENCE-----------
+  \section{Experience}
+    \resumeSubHeadingListStart
+
+      \resumeSubheading
+        {Frontend Developer}{July 2024 -- Present}
+        {Arjava Technologies}{Remote}
+        \resumeItemListStart
+          \resumeItem{Developed 5+ mobile-first web applications with React, HTML5, and CSS3, serving 1000+ daily active users}
+          \resumeItem{Integrated 10+ REST APIs with error handling and caching mechanisms, cutting data load time by 30\%}
+          \resumeItem{Accelerated page performance by 20\% through code splitting, lazy loading, and bundle optimization}
+          \resumeItem{Partnered with cross-functional teams in Agile sprints, achieving 99\% application uptime}
+        \resumeItemListEnd
+
+    \resumeSubHeadingListEnd
 
 
-%-----------TECHNICAL SKILLS-----------
-\section{Technical Skills}
-\begin{itemize}[leftmargin=0.15in, label={}]
-    \small{\item{
-    \textbf{Languages}{: JavaScript, Java, Python, Kotlin, SQL, HTML5, CSS3} \\
+  %-----------PROJECTS-----------
+  \section{Projects}
+
+  \textbf{Full Stack Web Applications}
+  \resumeItemListStart
+    \resumeItem{\textbf{Bharath University Website} -- Designed institutional website with HTML5, CSS3, and Bootstrap featuring 5+ pages}
+    \resumeItem{\textbf{Real-Time Web Application} -- Architected single-page application with JavaScript ES6+ and Node.js for live updates}
+    \resumeItem{\textbf{Portfolio Website} -- Created responsive portfolio with ReactJS displaying 8+ projects and SEO optimization}
+    \resumeItem{\textbf{Goddard School Platform} -- Engineered full-stack React application managing student enrollments, parent invitations, and form tracking}
+  \resumeItemListEnd
+
+  \textbf{Interactive \& Mobile Applications}
+  \resumeItemListStart
+    \resumeItem{\textbf{Tic Tac Toe Game} -- Programmed multiplayer game with ReactJS and Redux featuring game logic and score tracking}
+    \resumeItem{\textbf{Scientific Calculator} -- Implemented calculator with 20+ mathematical functions using vanilla JavaScript}
+    \resumeItem{\textbf{Dice Game} -- Built Android application with Kotlin and SQLite database storing 100+ game records}
+    \resumeItem{\textbf{Calculator App} -- Constructed Android calculator using Kotlin and Firebase supporting 15+ operations}
+  \resumeItemListEnd
+
+  \textbf{Algorithm Solutions}
+  \resumeItemListStart
+    \resumeItem{\textbf{LeetCode Challenges} -- Solved 100+ coding problems in Java covering arrays, binary trees, graph traversal, and DP algorithms}
+  \resumeItemListEnd
+
+
+
+  %
+  %-----------PROGRAMMING SKILLS-----------
+  \section{Technical Skills}
+  \begin{itemize}[leftmargin=0.15in, label={}]
+      \small{\item{
+      \textbf{Languages}{: JavaScript, Java, Python, Kotlin, SQL, HTML5, CSS3} \\
     \textbf{Frontend}{: ReactJS, Tailwind CSS, Bootstrap, Shadcn UI} \\
     \textbf{Backend \& APIs}{: Node.js, Express.js, RESTful APIs, FastAPI, WebSocket} \\
     \textbf{Database \& Cloud}{: MongoDB, MySQL, Supabase, Firebase, Render} \\
     \textbf{Tools \& AI}{: Git, GitHub, VS Code, Android Studio, Claude AI, Cursor AI, Magic Patterns} \\
-    \textbf{Soft Skills}{: Problem Solving, Team Collaboration, Communication, Time Management, Adaptability, Critical Thinking} \\
-    }}
-\end{itemize}
+    \textbf{Soft Skills}{: Team Collaboration, Communication, Agile Development, Code Review} \\
+      }}
+  \end{itemize}
 
 
-%-----------ACHIEVEMENTS-----------
-\section{Achievements}
-  \resumeItemListStart
-    \resumeItem{Completed 100+ LeetCode challenges with optimal solutions; boosted production performance by 20\% through optimization}
-    \resumeItem{Shipped 8+ full-stack applications from concept to deployment with 99\% uptime for 1000+ concurrent users}
-  \resumeItemListEnd
+  %-----------ACHIEVEMENTS-----------
+  \section{Achievements}
+    \resumeItemListStart
+      \resumeItem{Resolved 100+ algorithmic challenges on LeetCode with optimal time and space complexity}
+      \resumeItem{Improved production system efficiency by 20\% via strategic code refactoring}
+      \resumeItem{Delivered 8+ full-stack web and mobile applications using modern JavaScript frameworks}
+      \resumeItem{Maintained 99\% uptime for applications handling 1000+ concurrent users}
+    \resumeItemListEnd
 
 
-%-------------------------------------------
-\end{document}
+  %-------------------------------------------
+  \end{document}
