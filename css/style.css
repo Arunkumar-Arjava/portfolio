@@ -22,6 +22,42 @@ body {
 	font-weight: 600 !important;
 }
 
+.navbar-toggler-custom {
+	border: none;
+}
+
+.nav-icon {
+	color: #ffbf35;
+	font-size: 24px;
+}
+
+.nav-active {
+	color: #ffbf35 !important;
+	font-size: medium;
+}
+
+.about-link {
+	text-decoration: none;
+	color: white;
+}
+
+.nav-link.nav-active {
+	color: #ffbf35 !important;
+}
+
+.navbar-toggler-custom {
+	border: none;
+}
+
+.nav-icon {
+	color: #ffbf35;
+	font-size: 24px;
+}
+
+.social-icon-link {
+	text-decoration: none;
+}
+
 .span-col {
 	color: #ffbf35 !important;
 }
@@ -727,6 +763,62 @@ td {
 	background: #1a1a1a;
 	padding: 80px 0;
 	position: relative;
+}
+
+.bg-black {
+	background: #000 !important;
+}
+
+.contact-icon {
+	color: #ffbf35;
+	transition: transform 0.3s;
+}
+
+.contact-detail-text {
+	color: white;
+	max-height: 0;
+	overflow: hidden;
+	transition: max-height 0.5s ease, opacity 0.5s ease;
+	opacity: 0;
+}
+
+.contact-item {
+	cursor: pointer;
+	padding: 20px;
+	transition: all 0.3s ease;
+}
+
+.contact-item:hover {
+	transform: translateY(-5px);
+}
+
+.contact-item:hover .contact-detail-text {
+	max-height: 200px;
+	opacity: 1;
+	margin-top: 10px;
+}
+
+.contact-item:hover .contact-icon {
+	transform: scale(1.2) rotate(5deg);
+}
+
+.contact-icon {
+	color: #ffbf35;
+	transition: transform 0.3s;
+}
+
+.contact-detail-text {
+	color: white;
+	max-height: 0;
+	overflow: hidden;
+	transition: max-height 0.5s ease, opacity 0.5s ease;
+	opacity: 0;
+}
+
+.contact-item:hover .contact-detail-text {
+	max-height: 200px;
+	opacity: 1;
+	margin-top: 10px;
 }
 
 
