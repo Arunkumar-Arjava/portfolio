@@ -686,7 +686,7 @@ td {
 	font-size: 16px;
 }
 
-#content {
+.testimonial-content p {
 	text-align: justify;
 }
 
@@ -873,6 +873,17 @@ td {
 	min-height: 120px;
 }
 
+/* Honeypot field: hidden from humans, visible to bots */
+.hp-field {
+	position: absolute !important;
+	left: -9999px !important;
+	width: 1px !important;
+	height: 1px !important;
+	overflow: hidden !important;
+	opacity: 0;
+	pointer-events: none;
+}
+
 .contact button {
 	width: 100%;
 	height: 50px;
@@ -1046,7 +1057,7 @@ td {
 		margin-top: 12% !important;
 	}
 
-	#content {
+	.testimonial-content p {
 		text-align: justify;
 		font-size: 12px;
 	}
@@ -1090,7 +1101,7 @@ td {
 		font-size: 13px;
 	}
 
-	#content {
+	.testimonial-content p {
 		text-align: justify;
 		font-size: 12px;
 	}

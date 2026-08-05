@@ -67,12 +67,8 @@
     <!-- Critical local CSS loaded normally -->
     <link rel="stylesheet" href="css/style.css">
 
-    <!-- Bootstrap CSS: preload then apply asynchronously to eliminate render-blocking -->
-    <link rel="preload" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" as="style"
-        onload="this.onload=null;this.rel='stylesheet'">
-    <noscript>
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
-    </noscript>
+    <!-- Bootstrap CSS: loaded synchronously because the layout depends on it -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
 
     <!-- Font Awesome: preload then apply asynchronously + font-display:swap via URL param -->
     <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" as="style"
@@ -104,7 +100,8 @@
             <a class="navbar-brand logo" href="#mainBanner">
                 Port<span class="span-col">folio</span>
             </a>
-            <button class="navbar-toggler navbar-toggler-custom" type="button" aria-label="Toggle navigation">
+            <button class="navbar-toggler navbar-toggler-custom" type="button" aria-label="Toggle navigation"
+                aria-expanded="false" aria-controls="navbarNav">
                 <i id="navIcon" class="fas fa-bars nav-icon"></i>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
@@ -123,7 +120,7 @@
                         <a class="nav-link navbar-link" href="#projects">Projects</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link navbar-link" href="#MyService">Education</a>
+                        <a class="nav-link navbar-link" href="#education">Education</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link navbar-link" href="#Mentors">Mentor</a>
@@ -144,23 +141,24 @@
             <div class="col-md-6 col-sm-6 col-12 banner-section">
                 <span class="span-col">Welcome To My Portfolio</span>
                 <h1 id="name">Arun <span class="span-col">Kumar K</span></h1>
-                <h2 id="clgName">- Web Developer | Backend Developer | UI Developer</h2>
+                <h2 id="clgName">Frontend Developer | Web &amp; Android</h2>
 
                 <!-- Social Media Icons -->
-                <a href="https://www.facebook.com/profile.php?id=100054511256281&mibextid=ZbWKwL" target="_blank">
+                <a href="https://www.facebook.com/profile.php?id=100054511256281" target="_blank" rel="noopener noreferrer"
+                    aria-label="Facebook profile">
                     <i class="fab fa-facebook"></i>
                 </a>
-                <a href="https://twitter.com/Arunkum262005" target="_blank">
-                    <i class="fab fa-x-twitter"></i>
-                </a>
-                <a href="https://www.linkedin.com/in/arun-kumar-862981293" target="_blank">
+                <a href="https://www.linkedin.com/in/arun-kumar-862981293" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn profile">
                     <i class="fab fa-linkedin"></i>
                 </a>
-                <a href="https://www.instagram.com/_its_me_ak_26/" target="_blank">
+                <a href="https://www.instagram.com/_its_me_ak_26/" target="_blank" rel="noopener noreferrer" aria-label="Instagram profile">
                     <i class="fab fa-instagram"></i>
                 </a>
-                <a href="https://github.com/Arunkumar-Arjava" target="_blank">
+                <a href="https://github.com/Arunkumar-Arjava" target="_blank" rel="noopener noreferrer" aria-label="GitHub profile">
                     <i class="fab fa-github"></i>
+                </a>
+                 <a href="https://twitter.com/Arunkum262005" target="_blank" rel="noopener noreferrer" aria-label="Twitter profile">
+                    <i class="fab fa-x-twitter"></i>
                 </a>
             </div>
 
@@ -184,7 +182,7 @@
                     <h2 class="heading-text">About Me</h2>
                     <h5>I am available for Frontend Projects</h5>
                     <p>
-                        Welcome to my portfolio, I'm Arunkumar, a BCA graduate at Bharath University. I am interested in
+                        Welcome to my portfolio, I'm Arunkumar, a BCA student at Bharath University. I am interested in
                         software development. I was born in Masinagudi, Mudumalai, and learned a lot from my school
                         teachers,
                         which fueled my eagerness to learn new things.
@@ -216,7 +214,7 @@
                                     </tr>
                                     <tr>
                                         <th>GitHub:</th>
-                                        <td><a href="https://github.com/Arunkumar-Arjava" target="_blank" class="about-link">@arunkumar-arjava</a></td>
+                                        <td><a href="https://github.com/Arunkumar-Arjava" target="_blank" rel="noopener noreferrer" class="about-link">@arunkumar-arjava</a></td>
                                     </tr>
                                 </tbody>
                             </table>
@@ -309,62 +307,7 @@
                     </div>
                 </div>
             </div>
-
-            <!-- AI Tools Section -->
-            <div class="row mb-5">
-                <div class="col-12">
-                    <h3 class="skill-section-title">AI Tools</h3>
-                </div>
-                <div class="col-md-3 col-6 mb-4">
-                    <div class="skill-card">
-                        <i class="fas fa-robot skill-icon"></i>
-                        <h5>Claude AI</h5>
-                    </div>
-                </div>
-                <div class="col-md-3 col-6 mb-4">
-                    <div class="skill-card">
-                        <i class="fas fa-wand-magic-sparkles skill-icon"></i>
-                        <h5>Magic Patterns</h5>
-                    </div>
-                </div>
-                <div class="col-md-3 col-6 mb-4">
-                    <div class="skill-card">
-                        <i class="fas fa-file-alt skill-icon"></i>
-                        <h5>Fillout</h5>
-                    </div>
-                </div>
-                <div class="col-md-3 col-6 mb-4">
-                    <div class="skill-card">
-                        <i class="fab fa-github skill-icon"></i>
-                        <h5>GitHub Copilot</h5>
-                    </div>
-                </div>
-                <div class="col-md-3 col-6 mb-4">
-                    <div class="skill-card">
-                        <i class="fas fa-meteor skill-icon"></i>
-                        <h5>Kiro</h5>
-                    </div>
-                </div>
-                <div class="col-md-3 col-6 mb-4">
-                    <div class="skill-card">
-                        <i class="fas fa-atom skill-icon"></i>
-                        <h5>Antigravity</h5>
-                    </div>
-                </div>
-                <div class="col-md-3 col-6 mb-4">
-                    <div class="skill-card">
-                        <i class="fas fa-brain skill-icon"></i>
-                        <h5>Codex</h5>
-                    </div>
-                </div>
-                <div class="col-md-3 col-6 mb-4">
-                    <div class="skill-card">
-                        <i class="fas fa-code skill-icon"></i>
-                        <h5>OpenCode</h5>
-                    </div>
-                </div>
-            </div>
-
+            
             <!-- Version Control Section -->
             <div class="row mb-5">
                 <div class="col-12">
@@ -378,7 +321,7 @@
                 </div>
                 <div class="col-md-3 col-6 mb-4">
                     <div class="skill-card">
-                        <i class="fas fa-database skill-icon"></i>
+                        <i class="fas fa-layer-group skill-icon"></i>
                         <h5>Supabase</h5>
                     </div>
                 </div>
@@ -407,8 +350,6 @@
                     </div>
                 </div>
             </div>
-
-            <!-- Database Section -->
 
 
             <!-- Android Development Section -->
@@ -451,12 +392,6 @@
                     <div class="skill-card">
                         <i class="fas fa-desktop skill-icon"></i>
                         <h5>Frontend Testing</h5>
-                    </div>
-                </div>
-                <div class="col-md-3 col-6 mb-4">
-                    <div class="skill-card">
-                        <i class="fas fa-code skill-icon"></i>
-                        <h5>Code Testing</h5>
                     </div>
                 </div>
                 <div class="col-md-3 col-6 mb-4">
@@ -514,6 +449,27 @@
                     </div>
                 </div>
             </div>
+
+            <!-- AI Tools Section -->
+            <div class="row mt-4">
+                <div class="col-12">
+                    <h3 class="skill-section-title">AI Tools</h3>
+                </div>
+                <div class="col-12">
+                    <div class="skill-card">
+                        <p class="tools-line mb-0">
+                            <span class="tech-tag">Claude AI</span>
+                            <span class="tech-tag">GitHub Copilot</span>
+                            <span class="tech-tag">OpenCode</span>
+                            <span class="tech-tag">Codex</span>
+                            <span class="tech-tag">Kiro</span>
+                            <span class="tech-tag">Antigravity</span>
+                            <span class="tech-tag">Magic Patterns</span>
+                            <span class="tech-tag">Fillout</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 
@@ -531,7 +487,7 @@
                 <div class="col-md-6 col-lg-4 mb-4">
                     <div class="project-card">
                         <div class="project-image">
-                            <img src="image/project-images/static webside2.jpeg" alt="Static Website" loading="lazy"
+                            <img src="image/project-images/static-website2.jpeg" alt="Static Website" loading="lazy"
                                 width="400" height="200" decoding="async">
                         </div>
                         <div class="project-content">
@@ -545,8 +501,7 @@
                             </div>
                             <div class="project-links">
                                 <a href="https://arunkavitha1982.github.io/bharath_clg/bharath_home.html"
-                                    class="project-link" target="_blank">Live Demo</a>
-                                <a href="#" class="project-link">View Video</a>
+                                    class="project-link" target="_blank" rel="noopener noreferrer">Live Demo</a>
                             </div>
                         </div>
                     </div>
@@ -554,11 +509,11 @@
                 <div class="col-md-6 col-lg-4 mb-4">
                     <div class="project-card">
                         <div class="project-image">
-                            <img src="image/project-images/static webside.jpeg" alt="Static Website" loading="lazy"
+                            <img src="image/project-images/static-website.jpeg" alt="Static Website" loading="lazy"
                                 width="400" height="200" decoding="async">
                         </div>
                         <div class="project-content">
-                            <h3 class="project-title">PGM Air condenser</h3>
+                            <h3 class="project-title">PGM Air Condenser</h3>
                             <p class="project-description">A professional business website for PGM Air Condenser company
                                 showcasing products and services with modern design.</p>
                             <div class="project-tech">
@@ -568,7 +523,7 @@
                             </div>
                             <div class="project-links">
                                 <a href="https://arunkavitha1982.github.io/PGM-product/index.html" class="project-link"
-                                    target="_blank">Live Demo</a>
+                                    target="_blank" rel="noopener noreferrer">Live Demo</a>
                                 <a href="#" class="project-link">View Video</a>
                             </div>
                         </div>
@@ -577,13 +532,13 @@
                 <div class="col-md-6 col-lg-4 mb-4">
                     <div class="project-card">
                         <div class="project-image">
-                            <img src="image/project-images/web-App.jpeg" alt="Web Application" loading="lazy"
+                            <img src="image/project-images/web-app.jpeg" alt="Web Application" loading="lazy"
                                 width="400" height="200" decoding="async">
                         </div>
                         <div class="project-content">
-                            <h3 class="project-title">Web Application</h3>
-                            <p class="project-description">An interactive web application featuring dynamic content,
-                                user interactions, and modern JavaScript functionality.</p>
+                            <h3 class="project-title">PGM Web App</h3>
+                            <p class="project-description">An interactive web application for PGM featuring dynamic
+                                content, user interactions, and modern JavaScript functionality.</p>
                             <div class="project-tech">
                                 <span class="tech-tag">JavaScript</span>
                                 <span class="tech-tag">Node.js</span>
@@ -591,8 +546,7 @@
                             </div>
                             <div class="project-links">
                                 <a href="https://arunkavitha1982.github.io/pgm_webApp/index.html" class="project-link"
-                                    target="_blank">Live Demo</a>
-                                <a href="#" class="project-link">View Video</a>
+                                    target="_blank" rel="noopener noreferrer">Live Demo</a>
                             </div>
                         </div>
                     </div>
@@ -602,11 +556,11 @@
                 <div class="col-md-6 col-lg-4 mb-4">
                     <div class="project-card">
                         <div class="project-image">
-                            <img src="image/project-images/web-App3.jpeg" alt="Web App 3" loading="lazy" width="400"
+                            <img src="image/project-images/web-app3.jpeg" alt="Web App 3" loading="lazy" width="400"
                                 height="200" decoding="async">
                         </div>
                         <div class="project-content">
-                            <h3 class="project-title">Guess the number game</h3>
+                            <h3 class="project-title">Guess the Number Game</h3>
                             <p class="project-description">An engaging number guessing game with interactive feedback
                                 and score tracking system.</p>
                             <div class="project-tech">
@@ -625,7 +579,7 @@
                 <div class="col-md-6 col-lg-4 mb-4">
                     <div class="project-card">
                         <div class="project-image">
-                            <img src="image/project-images/web-App2.jpeg" alt="Web App 2" loading="lazy" width="400"
+                            <img src="image/project-images/web-app2.jpeg" alt="Web App 2" loading="lazy" width="400"
                                 height="200" decoding="async">
                         </div>
                         <div class="project-content">
@@ -639,7 +593,7 @@
                             </div>
                             <div class="project-links">
                                 <a href="https://arunkavitha1982.github.io/javaScript/scientific_calculator.html"
-                                    class="project-link" target="_blank">Live Demo</a>
+                                    class="project-link" target="_blank" rel="noopener noreferrer">Live Demo</a>
                                 <a href="#" class="project-link">View Video</a>
                             </div>
                         </div>
@@ -649,11 +603,11 @@
                 <div class="col-md-6 col-lg-4 mb-4">
                     <div class="project-card">
                         <div class="project-image">
-                            <img src="image/project-images/web-App4.jpeg.png" alt="Web App 4" loading="lazy" width="400"
+                            <img src="image/project-images/web-app4.png" alt="Web App 4" loading="lazy" width="400"
                                 height="200" decoding="async">
                         </div>
                         <div class="project-content">
-                            <h3 class="project-title">Rock paper scissor </h3>
+                            <h3 class="project-title">Rock Paper Scissors</h3>
                             <p class="project-description">A Rock Paper Scissors web application with advanced
                                 game functions and user-friendly interface.</p>
                             <div class="project-tech">
@@ -663,7 +617,7 @@
                             </div>
                             <div class="project-links">
                                 <a href="https://arunkavitha1982.github.io/javaScript/rock_paper_scissors.html"
-                                    class="project-link" target="_blank">Live Demo</a>
+                                    class="project-link" target="_blank" rel="noopener noreferrer">Live Demo</a>
                                 <a href="#" class="project-link">View Video</a>
                             </div>
                         </div>
@@ -683,12 +637,12 @@
                                 modern UI design and responsive layout.</p>
                             <div class="project-tech">
                                 <span class="tech-tag">React</span>
-                                <span class="tech-tag">JavaScript</span>
+                                <span class="tech-tag">TypeScript</span>
                                 <span class="tech-tag">Tailwind CSS</span>
                             </div>
                             <div class="project-links">
-                                <a href="#" class="project-link">Live Demo</a>
-                                <a href="#" class="project-link">View Video</a>
+                                <a href="http://dev.goddard-web.pages.dev/" class="project-link"
+                                    target="_blank" rel="noopener noreferrer">Live Demo</a>
                             </div>
                         </div>
                     </div>
@@ -709,8 +663,8 @@
                                 <span class="tech-tag">MySQL</span>
                             </div>
                             <div class="project-links">
-                                <a href="#" class="project-link">Live Demo</a>
-                                <a href="#" class="project-link">View Video</a>
+                                <a href="https://github.com/Arunkumar-Arjava/kadaikutty" class="project-link"
+                                    target="_blank" rel="noopener noreferrer">View Source</a>
                             </div>
                         </div>
                     </div>
@@ -732,7 +686,7 @@
                                 <span class="tech-tag">JavaScript</span>
                             </div>
                             <div class="project-links">
-                                <a href="https://arunkumar-arjava.github.io/work/stack.html" target="_blank"
+                                <a href="https://arunkumar-arjava.github.io/work/stack.html" target="_blank" rel="noopener noreferrer"
                                     class="project-link">Live
                                     Demo</a>
                                 <a href="#" class="project-link">View Video</a>
@@ -758,7 +712,7 @@
                                 <span class="tech-tag">JavaScript</span>
                             </div>
                             <div class="project-links">
-                                <a href="https://arunkumar-arjava.github.io/work/queue.html" target="_blank"
+                                <a href="https://arunkumar-arjava.github.io/work/queue.html" target="_blank" rel="noopener noreferrer"
                                     class="project-link">Live
                                     Demo</a>
                                 <a href="#" class="project-link">View Video</a>
@@ -783,7 +737,7 @@
                                 <span class="tech-tag">JavaScript</span>
                             </div>
                             <div class="project-links">
-                                <a href="https://arunkumar-arjava.github.io/work/connect-four.html" target="_blank"
+                                <a href="https://arunkumar-arjava.github.io/work/connect-four.html" target="_blank" rel="noopener noreferrer"
                                     class="project-link">Live Demo</a>
                                 <a href="#" class="project-link">View Video</a>
                             </div>
@@ -795,7 +749,7 @@
                     <div class="project-card">
                         <div class="project-image">
 
-                            <img src="image/project-images/leedcode.jpg" alt="LeetCode Solutions" loading="lazy"
+                            <img src="image/project-images/leetcode.jpg" alt="LeetCode Solutions" loading="lazy"
                                 width="400" height="200" decoding="async">
                         </div>
                         <div class="project-content">
@@ -809,7 +763,7 @@
                             </div>
                             <div class="project-links">
                                 <a href="https://leetcode.com/u/arunkumar2005/" class="project-link"
-                                    target="_blank">View Solutions</a>
+                                    target="_blank" rel="noopener noreferrer">View Solutions</a>
 
                             </div>
                         </div>
@@ -827,7 +781,7 @@
                                 width="400" height="200" decoding="async">
                         </div>
                         <div class="project-content">
-                            <h3 class="project-title">Roll dies game</h3>
+                            <h3 class="project-title">Roll Dice Game</h3>
                             <p class="project-description">A fun dice rolling game for Android with interactive
                                 animations and random number generation.</p>
                             <div class="project-tech">
@@ -837,7 +791,7 @@
                             </div>
                             <div class="project-links">
                                 <a href="https://www.linkedin.com/posts/arun-kumar-862981293_androidappdevelopment-kotlin-activity-7183069936624304128-Ocqh?utm_source=share&utm_medium=member_android&rcm=ACoAAEcoL4oBpkLAInPoBfdsGAZMFHNoCZzx5Ko"
-                                    class="project-link" target="_blank">View Demo</a>
+                                    class="project-link" target="_blank" rel="noopener noreferrer">View Demo</a>
                                 <a href="#" class="project-link">View Video</a>
                             </div>
                         </div>
@@ -860,7 +814,7 @@
                             </div>
                             <div class="project-links">
                                 <a href="https://www.linkedin.com/posts/arun-kumar-862981293_androidappdevelopment-kotlin-activity-7179188736608411648-PuR6?utm_source=share&utm_medium=member_android&rcm=ACoAAEcoL4oBpkLAInPoBfdsGAZMFHNoCZzx5Ko"
-                                    class="project-link" target="_blank">View Demo</a>
+                                    class="project-link" target="_blank" rel="noopener noreferrer">View Demo</a>
                                 <a href="#" class="project-link">View Video</a>
                             </div>
                         </div>
@@ -873,7 +827,7 @@
                                 width="400" height="200" decoding="async">
                         </div>
                         <div class="project-content">
-                            <h3 class="project-title">Rock paper scissor</h3>
+                            <h3 class="project-title">Rock Paper Scissors</h3>
                             <p class="project-description">A classic Rock Paper Scissors game for Android with
                                 interactive gameplay and score tracking.</p>
                             <div class="project-tech">
@@ -883,7 +837,7 @@
                             </div>
                             <div class="project-links">
                                 <a href="https://www.linkedin.com/posts/arun-kumar-862981293_i-successfully-created-my-rock-paper-scissors-activity-7178803993584828416-3gKq?utm_source=share&utm_medium=member_android&rcm=ACoAAEcoL4oBpkLAInPoBfdsGAZMFHNoCZzx5Ko"
-                                    class="project-link" target="_blank">View Demo</a>
+                                    class="project-link" target="_blank" rel="noopener noreferrer">View Demo</a>
                                 <a href="#" class="project-link">View Video</a>
                             </div>
                         </div>
@@ -940,7 +894,7 @@
 
         </div>
     </div>
-    <div class="main-section container-fluid py-5 bg-lightgrey" id="MyService">
+    <div class="main-section container-fluid py-5 bg-lightgrey" id="education">
         <h2 class="heading-text text-center">My Education &amp; Experience</h2>
         <div class="container">
             <div class="row">
@@ -959,6 +913,13 @@
                             <h2>GTR Karkudi, The Nilgiris</h2>
                             <h3>2021-2023</h3>
                             <p>11th Standard to 12th Standard</p>
+                        </div>
+                    </div>
+                    <div class="experience-list">
+                        <div class="experience-content">
+                            <h2>Bharath University, Chennai</h2>
+                            <h3>BCA</h3>
+                            <p>Bachelor of Computer Applications (Pursuing)</p>
                         </div>
                     </div>
                 </div>
@@ -996,7 +957,7 @@
                                     decoding="async">
                             </div>
                             <i class="fa fa-quote-left"></i>
-                            <p id="content">Mr. Palaniappan Vairavan is an educator, entrepreneur, and a
+                            <p class="testimonial-text">Mr. Palaniappan Vairavan is an educator, entrepreneur, and a
                                 visionary who
                                 believes that
                                 education can alleviate most of the key challenges faced by society today. He is
@@ -1020,7 +981,7 @@
                                     height="80" decoding="async">
                             </div>
                             <i class="fa fa-quote-left"></i>
-                            <p id="content">Sivakumar is passionate about learning and teaching. He has been
+                            <p class="testimonial-text">Sivakumar is passionate about learning and teaching. He has been
                                 part of the
                                 Hope 3
                                 Foundation as a member in governing body since the inception of the non profit
@@ -1043,7 +1004,7 @@
                                     decoding="async">
                             </div>
                             <i class="fa fa-quote-left"></i>
-                            <p id="content">He is working as a dedicated Tamil teacher in a tribal higher
+                            <p class="testimonial-text">He is working as a dedicated Tamil teacher in a tribal higher
                                 secondary
                                 school located
                                 in Kargudi,
@@ -1065,11 +1026,11 @@
                     <div class="testimonial">
                         <div class="testimonial-content">
                             <div class="testimonial-img">
-                                <img src="image/Mani-anna.jpg" alt="Dr. Rajesh" loading="lazy" width="80" height="80"
+                                <img src="image/Mani-anna.jpg" alt="Mr. Mani" loading="lazy" width="80" height="80"
                                     decoding="async">
                             </div>
                             <i class="fa fa-quote-left"></i>
-                            <p id="content">Mr. Mani is my best teacher and mentor who has guided me throughout
+                            <p class="testimonial-text">Mr. Mani is my best teacher and mentor who has guided me throughout
                                 my
                                 learning journey. His exceptional teaching methods helped me develop strong
                                 programming
@@ -1114,6 +1075,8 @@
                             </div>
                         </div>
                         <textarea name="message" placeholder="Your Message" required></textarea>
+                        <input type="text" name="website" class="hp-field" tabindex="-1" autocomplete="off"
+                            aria-hidden="true">
                         <button type="submit">Send Message</button>
                     </form>
                 </div>
@@ -1199,11 +1162,6 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" defer></script>
     <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
     <script>
-        if (typeof emailjs === 'undefined') {
-            document.write('<script src="https://unpkg.com/@emailjs/browser@4/dist/email.min.js"><\/script>');
-        }
-    </script>
-    <script>
         // Video Modal Handler
         document.addEventListener('DOMContentLoaded', function () {
             const videoLinks = document.querySelectorAll('a[href="#"].project-link');
@@ -1220,20 +1178,20 @@
                         const isMobileSection = projectCard.closest('.row').previousElementSibling?.textContent.includes('Mobile');
 
                         let videoUrl = '';
-                        if (projectTitle === 'Guess the number game') {
-                            videoUrl = 'video/number guess.mp4';
-                        } else if (projectTitle === 'PGM Air condenser') {
-                            videoUrl = 'video/PG Mechanical.mp4';
+                        if (projectTitle === 'Guess the Number Game') {
+                            videoUrl = 'video/number-guess.mp4';
+                        } else if (projectTitle === 'PGM Air Condenser') {
+                            videoUrl = 'video/pg-mechanical.mp4';
                         } else if (projectTitle === 'Calculator' && !isMobileSection) {
-                            videoUrl = 'video/calculator web.mp4';
+                            videoUrl = 'video/calculator-web.mp4';
                         } else if (projectTitle === 'Calculator' && isMobileSection) {
                             videoUrl = 'video/calculator.mp4';
-                        } else if (projectTitle === 'Rock paper scissor' && !isMobileSection) {
-                            videoUrl = 'video/rock paper scesson web.mp4';
-                        } else if (projectTitle === 'Rock paper scissor' && isMobileSection) {
-                            videoUrl = 'video/rock paper scessor.mp4';
-                        } else if (projectTitle === 'Roll dies game') {
-                            videoUrl = 'video/roll dies.mp4';
+                        } else if (projectTitle === 'Rock Paper Scissors' && !isMobileSection) {
+                            videoUrl = 'video/rock-paper-scissors-web.mp4';
+                        } else if (projectTitle === 'Rock Paper Scissors' && isMobileSection) {
+                            videoUrl = 'video/rock-paper-scissors.mp4';
+                        } else if (projectTitle === 'Roll Dice Game') {
+                            videoUrl = 'video/roll-dice.mp4';
                         } else if (projectTitle === 'Queue') {
                             videoUrl = 'video/queue-visualizer.mp4';
                         } else if (projectTitle === 'Stack') {
@@ -1290,6 +1248,10 @@
         document.getElementById('contactForm').addEventListener('submit', function (e) {
             e.preventDefault();
 
+            if (this.elements.website.value) {
+                return;
+            }
+
             if (typeof emailjs === 'undefined') {
                 alert('Email service failed to load. Please try again later.');
                 return;
@@ -1321,7 +1283,7 @@
             const aboutElements = document.querySelectorAll('.about-us h2, .about-us h5, .about-us p, .about-img, .about-us table');
             const skillElements = document.querySelectorAll('#skills .heading-text, .skill-section-title, .skill-card');
             const projectElements = document.querySelectorAll('#projects .heading-text, .project-card');
-            const experienceElements = document.querySelectorAll('#MyService .heading-text, .experience-list');
+            const experienceElements = document.querySelectorAll('#education .heading-text, .experience-list');
             const mentorElements = document.querySelectorAll('#Mentors .heading-text, .testimonial');
             const contactElements = document.querySelectorAll('#contact .heading-text, .contact form, .contact .row');
 
@@ -1381,13 +1343,15 @@
             const navIcon = document.getElementById('navIcon');
 
             navToggler.addEventListener('click', function () {
-                navCollapse.classList.toggle('show');
-                navIcon.className = navCollapse.classList.contains('show') ? 'fas fa-xmark' : 'fas fa-bars';
+                const isOpen = navCollapse.classList.toggle('show');
+                navToggler.setAttribute('aria-expanded', isOpen);
+                navIcon.className = isOpen ? 'fas fa-xmark' : 'fas fa-bars';
             });
 
             document.addEventListener('click', function (e) {
                 if (!navCollapse.contains(e.target) && !navToggler.contains(e.target) && navCollapse.classList.contains('show')) {
                     navCollapse.classList.remove('show');
+                    navToggler.setAttribute('aria-expanded', 'false');
                     navIcon.className = 'fas fa-bars';
                 }
             });
@@ -1395,14 +1359,13 @@
             document.querySelectorAll('.navbar-link').forEach(link => {
                 link.addEventListener('click', function () {
                     navCollapse.classList.remove('show');
+                    navToggler.setAttribute('aria-expanded', 'false');
                     navIcon.className = 'fas fa-bars';
                 });
             });
 
             // Scroll-based active nav highlight
-            const sections = document.querySelectorAll('div[id], nav[id]');
-            const navLinks = document.querySelectorAll('.navbar-link, .nav-active');
-            const sectionIds = ['mainBanner', 'About', 'skills', 'projects', 'MyService', 'Mentors', 'contact'];
+            const sectionIds = ['mainBanner', 'About', 'skills', 'projects', 'education', 'Mentors', 'contact'];
             window.addEventListener('scroll', function () {
                 let current = 'mainBanner';
                 sectionIds.forEach(id => {
