@@ -440,6 +440,88 @@ td {
 	color: #000;
 }
 
+/* ===== SERVICE SECTION ===== */
+.service-card {
+	background: #262626;
+	padding: 35px 25px;
+	border-radius: 15px;
+	text-align: center;
+	transition: all 0.3s ease;
+	border: 1px solid #333;
+	position: relative;
+	overflow: hidden;
+}
+
+.service-card:hover {
+	transform: translateY(-10px);
+	box-shadow: 0 15px 30px rgba(255, 191, 53, 0.3);
+	border-color: #ffbf35;
+}
+
+.service-icon {
+	font-size: 50px;
+	color: #ffbf35;
+	margin-bottom: 20px;
+	display: block;
+	transition: all 0.3s ease;
+}
+
+.service-card:hover .service-icon {
+	transform: scale(1.1) rotate(5deg);
+}
+
+.service-card h4 {
+	color: #ffbf35;
+	font-size: 20px;
+	font-weight: 600;
+	margin-bottom: 12px;
+}
+
+.service-card p {
+	color: #cfcfcf;
+	font-size: 14px;
+	line-height: 22px;
+}
+
+/* ===== SERVICE SECTION RESPONSIVE ===== */
+@media (max-width: 768px) {
+	.service-card {
+		padding: 25px 20px;
+	}
+
+	.service-icon {
+		font-size: 40px;
+		margin-bottom: 15px;
+	}
+
+	.service-card h4 {
+		font-size: 17px;
+	}
+
+	.service-card p {
+		font-size: 13px;
+	}
+}
+
+@media (max-width: 576px) {
+	.service-card {
+		padding: 20px 15px;
+	}
+
+	.service-icon {
+		font-size: 35px;
+		margin-bottom: 12px;
+	}
+
+	.service-card h4 {
+		font-size: 15px;
+	}
+
+	.service-card p {
+		font-size: 12px;
+	}
+}
+
 /* ===== EXPERIENCE SECTION ===== */
 .edu-exp {
 	padding: 10px 0px;
