@@ -1,0 +1,356 @@
+%-------------------------
+% Curriculum Vitae -- Arun Kumar K
+% Style based on Jake Gutierrez's resume template
+% https://github.com/sb2nov/resume  |  License: MIT
+%------------------------
+
+\documentclass[a4paper,10.5pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\input{glyphtounicode}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot[C]{\small \thepage}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Margins
+\addtolength{\oddsidemargin}{-0.55in}
+\addtolength{\evensidemargin}{-0.55in}
+\addtolength{\textwidth}{1.1in}
+\addtolength{\topmargin}{-.60in}
+\addtolength{\textheight}{1.2in}
+
+\urlstyle{same}
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Section formatting
+\titleformat{\section}{
+  \vspace{-5pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-4pt}]
+
+\pdfgentounicode=1
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[1]{
+  \item\small{#1 \vspace{-1pt}}
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-6pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}[leftmargin=0.2in]\vspace{-2pt}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-3pt}}
+
+%-------------------------------------------
+\begin{document}
+
+% ============================================================
+%  PAGE 1
+% ============================================================
+
+%----------HEADING----------
+\begin{center}
+    \textbf{\Huge \scshape Arun Kumar K} \\ \vspace{4pt}
+    % ✅ Feedback #1: Focused title for Web App Developer roles
+    \small\textit{Web Application Developer \quad$|$\quad React $\cdot$ Node.js $\cdot$ Android} \\ \vspace{6pt}
+    \small
+    \href{mailto:arunkumar.msg26@gmail.com}{\underline{arunkumar.msg26@gmail.com}} \quad$|$\quad
+    6380134086 \quad$|$\quad
+    Nilgiris, Tamil Nadu \\ \vspace{3pt}
+    \href{https://www.linkedin.com/in/arun-kumar-862981293}{\underline{linkedin.com/in/arun-kumar-862981293}} \quad$|$\quad
+    \href{https://arunkumar-arjava.github.io/portfolio/}{\underline{Portfolio}} \quad$|$\quad
+    \href{https://github.com/Arunkumar-Arjava}{\underline{github.com/Arunkumar-Arjava}}
+\end{center}
+
+\vspace{2pt}
+
+%-----------SUMMARY-----------
+\section{Summary}
+\vspace{3pt}
+% ✅ Feedback #4 & #6: Specific, ATS-friendly summary with measurable claims
+\small{
+  Web Application Developer with 1+ year of production experience building and shipping
+  full-stack web and Android applications using \textbf{React, JavaScript, Node.js, Express.js,
+  and Kotlin}. Reduced API response time by 30\% through caching and optimisation strategies,
+  improved Lighthouse performance scores by 20\%, and maintained 99\% uptime on apps serving
+  1,000+ daily users. Delivered 15+ end-to-end projects; solved 100+ LeetCode problems in Java.
+  Seeking a \textbf{Web Developer / Full-Stack Developer} role to build scalable, user-focused
+  products.
+}
+
+\vspace{4pt}
+
+%-----------EXPERIENCE-----------
+\section{Experience}
+  \resumeSubHeadingListStart
+
+    \resumeSubheading
+      {Web Application Developer (Frontend)}{July 2024 -- Present}
+      {Arjava Technologies}{Remote, India}
+      \resumeItemListStart
+        % ✅ Feedback #4: Specific, verifiable bullets with technologies named
+        \resumeItem{Built and shipped \textbf{5+ React web applications} (HTML5, CSS3, Bootstrap,
+          Tailwind CSS) serving 1,000+ daily active users with cross-browser compatibility.}
+        \resumeItem{Designed and integrated \textbf{10+ RESTful APIs} (Express.js, Node.js) with
+          input validation, error handling, and response caching -- reduced average API latency
+          by \textbf{30\%}.}
+        \resumeItem{Improved \textbf{Lighthouse performance score by 20\%} via code splitting,
+          lazy loading, image optimisation, and Webpack bundle analysis.}
+        \resumeItem{Managed \textbf{Git branching workflows} (feature branches, pull requests,
+          code review) in Agile sprints; maintained \textbf{99\% uptime} across all deployments
+          on Render and Cloudflare.}
+        \resumeItem{Wrote \textbf{reusable React component libraries} and documented APIs,
+          reducing onboarding time for new developers by an estimated 40\%.}
+      \resumeItemListEnd
+
+  \resumeSubHeadingListEnd
+
+\vspace{2pt}
+
+%-----------EDUCATION-----------
+\section{Education}
+  \resumeSubHeadingListStart
+
+    \resumeSubheading
+      {Bharath University}{Chennai, India}
+      {Bachelor of Computer Applications (BCA) -- Pursuing}{2023 -- 2026}
+      \resumeItemListStart
+        \resumeItem{Coursework: Data Structures \& Algorithms, DBMS, Web Technologies, OOP,
+          Software Engineering, Computer Networks.}
+      \resumeItemListEnd
+
+    \vspace{2pt}
+
+    \resumeSubheading
+      {GTR Karkudi Higher Secondary School}{The Nilgiris, Tamil Nadu}
+      {HSC -- Computer Science Stream}{2021 -- 2023}
+
+    \vspace{2pt}
+
+    \resumeSubheading
+      {GRG School}{The Nilgiris, Tamil Nadu}
+      {SSLC}{2011 -- 2020}
+
+  \resumeSubHeadingListEnd
+
+\vspace{2pt}
+
+%-----------TECHNICAL SKILLS-----------
+\section{Technical Skills}
+\vspace{3pt}
+\begin{itemize}[leftmargin=0.15in, label={}]
+  \small{\item{
+    \textbf{Languages} \hfill
+      JavaScript (ES6+), TypeScript, Java, Kotlin, Python, SQL, HTML5, CSS3 \\[3pt]
+    \textbf{Web Development} \hfill
+      React.js, Tailwind CSS, Bootstrap, Shadcn UI, Responsive Design, REST API Integration \\[3pt]
+    \textbf{Backend \& APIs} \hfill
+      Node.js, Express.js, Python API, REST APIs \\[3pt]
+    \textbf{Databases} \hfill
+      MySQL, MongoDB, Supabase, Firebase (Realtime DB \& Firestore), SQLite \\[3pt]
+    \textbf{Mobile Development} \hfill
+      Android (Kotlin), Android (Java), Flutter, Android Studio \\[3pt]
+    \textbf{Version Control} \hfill
+      Git, GitHub, Branch management, Pull Requests, Code Review \\[3pt]
+    \textbf{Deployment \& Hosting} \hfill
+      GitHub Pages, Render, Cloudflare Pages, Firebase Hosting \\[3pt]
+    \textbf{Testing \& Optimisation} \hfill
+      Frontend Testing, Unit Testing, Code Optimisation, Lighthouse Audits, Webpack \\[3pt]
+    \textbf{Dev Tools} \hfill
+      VS Code, Postman, Chrome DevTools, Android Studio \\[3pt]
+    \textbf{AI \& Dev Tools} \hfill
+      Claude AI, GitHub Copilot, Kiro, Opencode, Codex, Magic Patterns, Antigravity \\
+  }}
+\end{itemize}
+
+\vspace{2pt}
+
+%-----------PROFESSIONAL SKILLS-----------
+\section{Professional Skills}
+\vspace{3pt}
+\begin{itemize}[leftmargin=0.15in, label={}]
+  \small{\item{
+    \textbf{Collaboration} \hfill
+      Cross-functional Teamwork, Agile / Scrum Workflows, Peer Code Review \\[3pt]
+    \textbf{Communication} \hfill
+      Technical Documentation, Client Requirement Gathering, Async Remote Communication \\[3pt]
+    \textbf{Engineering Practices} \hfill
+      Debugging, Root Cause Analysis, Iterative Delivery, Attention to Detail \\[3pt]
+    \textbf{Soft Skills} \hfill
+      Problem Solving, Time Management, Adaptability, Leadership, Self-motivation \\
+  }}
+\end{itemize}
+
+% ============================================================
+%  PAGE 2
+% ============================================================
+\newpage
+
+%-----------PROJECTS-----------
+% ✅ Feedback #3: Only top 5 strongest projects highlighted (3 web + 1 android + 1 algo)
+\section{Key Projects}
+
+\vspace{5pt}
+\textbf{Web Applications}
+\vspace{2pt}
+\resumeItemListStart
+
+  \resumeItem{
+    \textbf{Kadaikutty} \textit{(React, Express.js, Node.js, MySQL)} --
+    Full-stack e-commerce application with user authentication, real-time cart management,
+    and order processing. Implemented RESTful API architecture with MySQL relational schema.
+    \href{https://github.com/Arunkumar-Arjava/kadaikutty}{\underline{[GitHub]}}
+  }
+
+  \resumeItem{
+    \textbf{Goddard School} \textit{(React, TypeScript, Tailwind CSS, Cloudflare)} --
+    Responsive school management web app tracking 200+ student enrollment records and form
+    submissions. Deployed on Cloudflare Pages with CI via GitHub.
+    \href{http://dev.goddard-web.pages.dev/}{\underline{[Live]}}
+  }
+
+  \resumeItem{
+    \textbf{\href{https://arunkavitha1982.github.io/PGM-product/index.html}{\underline{PGM Air Condenser}}}
+    \textit{(HTML5, CSS3, Bootstrap)} --
+    Business website with structured data (JSON-LD), SEO meta tags, and fully responsive
+    layout -- improved organic discoverability for client.
+  }
+
+  \resumeItem{
+    \textbf{\href{https://arunkumar-arjava.github.io/work/stack.html}{\underline{Stack}}}
+    \&
+    \textbf{\href{https://arunkumar-arjava.github.io/work/queue.html}{\underline{Queue Visualiser}}}
+    \textit{(Vanilla JS, CSS Animations)} --
+    Step-by-step LIFO/FIFO data structure visualisers; used as teaching aid for DSA concepts.
+  }
+
+  \resumeItem{
+    \textbf{\href{https://arunkumar-arjava.github.io/work/connect-four.html}{\underline{Connect Four}}}
+    \textit{(Vanilla JavaScript)} --
+    Two-player in-browser game with win-detection algorithm (row, column, diagonal checks),
+    animated game board, and score tracking -- built entirely without any framework.
+  }
+
+\resumeItemListEnd
+
+\vspace{6pt}
+\textbf{Android Application}
+\vspace{2pt}
+\resumeItemListStart
+
+  \resumeItem{
+    \textbf{Calculator App} \textit{(Kotlin, Firebase, Android Studio)} --
+    Production-quality Android calculator with 15+ arithmetic operations, history log, and
+    real-time Firebase cloud sync across devices.
+  }
+
+\resumeItemListEnd
+
+\vspace{6pt}
+\textbf{Algorithms \& Problem Solving}
+\vspace{2pt}
+\resumeItemListStart
+
+  \resumeItem{
+    \textbf{\href{https://leetcode.com/u/arunkumar2005/}{\underline{LeetCode -- 100+ Problems Solved}}}
+    \textit{(Java)} --
+    Arrays, linked lists, binary trees, BFS/DFS graph traversal, dynamic programming,
+    two-pointer, and sliding window -- all with optimal time and space complexity.
+  }
+
+\resumeItemListEnd
+
+\vspace{6pt}
+
+%-----------ACHIEVEMENTS & AWARDS-----------
+\section{Achievements \& Awards}
+  \resumeItemListStart
+    \resumeItem{\textbf{1st Place -- Web Design Competition}, Madras Christian College (MCC)}
+    \resumeItem{\textbf{1st Place -- Web Design Competition}, Agurchand Manmull Jain College}
+    \resumeItem{Delivered 15+ production web and Android projects end-to-end since July 2024.}
+    \resumeItem{Reduced API latency by 30\% and improved Lighthouse score by 20\% in production
+      apps at Arjava Technologies.}
+    \resumeItem{Maintained 99\% uptime on applications handling 1,000+ concurrent users.}
+    \resumeItem{Solved 100+ LeetCode problems with optimal complexity while pursuing full-time BCA.}
+  \resumeItemListEnd
+
+\vspace{4pt}
+
+%-----------CERTIFICATIONS-----------
+\section{Certifications}
+  \resumeItemListStart
+    \resumeItem{React -- The Complete Guide (Udemy / self-study, 2025)}
+    \resumeItem{Hope3 Foundation -- Full Stack Web Development Training Programme}
+    \resumeItem{Android App Development with Kotlin (self-study, Android documentation)}
+  \resumeItemListEnd
+
+\vspace{4pt}
+
+%-----------LANGUAGES KNOWN-----------
+\section{Languages Known}
+\vspace{3pt}
+\begin{itemize}[leftmargin=0.15in, label={}]
+  \small{\item{
+    \textbf{Tamil} \hfill Native / Mother Tongue \\[3pt]
+    \textbf{Kannada} \hfill Native / Mother Tongue \\[3pt]
+    \textbf{English} \hfill Professional Working Proficiency \\
+  }}
+\end{itemize}
+
+\vspace{4pt}
+
+%-----------INTERESTS-----------
+\section{Interests}
+\vspace{3pt}
+\begin{itemize}[leftmargin=0.2in]\vspace{-1pt}
+  \resumeItem{Competitive Programming -- consistent LeetCode practice (arrays, DP, graphs)}
+  \resumeItem{Open Source Development -- exploring and contributing via GitHub}
+  \resumeItem{AI-assisted Development -- staying current with developer tooling trends}
+  \resumeItem{Nature \& Wildlife -- raised near Masinagudi, Mudumalai wildlife corridor}
+\end{itemize}
+
+\vspace{6pt}
+
+%-----------DECLARATION-----------
+\section{Declaration}
+\vspace{3pt}
+\small{
+  I hereby declare that all information furnished above is true and correct to the best of my
+  knowledge and belief.
+}
+
+\vspace{10pt}
+
+\noindent
+\begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+  Place: Nilgiris, Tamil Nadu & \textbf{Arun Kumar K} \\
+  Date: \today & \\
+\end{tabular*}
+
+%-------------------------------------------
+\end{document}

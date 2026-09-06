@@ -222,10 +222,13 @@
                     </div>
 
                     <!-- Resume Download Button -->
-                    <div class="mt-4">
+                    <div class="mt-4 btn-group-responsive">
                         <button id="resumeBtn" class="btn btn-primary" onclick="downloadResume()">
-                            <i class="fas fa-download"></i> Download Resume
+                            <i class="fas fa-download"></i> <span class="btn-full-text">Download </span>Resume
                         </button>
+                        <a href="resume/Arunkumar_CV.pdf" download="Arunkumar_CV.pdf" class="btn btn-primary" style="text-decoration:none;">
+                            <i class="fas fa-file-alt"></i> <span class="btn-full-text">Download </span>CV
+                        </a>
                     </div>
 
                 </div>
@@ -1235,7 +1238,7 @@
                 .catch(() => alert('Download failed. Please try again.'))
                 .finally(() => {
                     btn.disabled = false;
-                    btn.innerHTML = '<i class="fas fa-download"></i> Download Resume';
+                    btn.innerHTML = '<i class="fas fa-download"></i> <span class="btn-full-text">Download </span>Resume';
                 });
         }
 

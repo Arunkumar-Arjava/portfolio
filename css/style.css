@@ -690,6 +690,40 @@ td {
 	text-align: justify;
 }
 
+/* ===== BUTTON GROUP RESPONSIVE ===== */
+.btn-group-responsive {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 12px;
+	margin-top: 16px;
+}
+
+.btn-group-responsive .btn-primary {
+	flex: 1 1 auto;
+	min-width: 160px;
+	max-width: 220px;
+	text-align: center;
+}
+
+@media (max-width: 480px) {
+	.btn-group-responsive {
+		flex-direction: row;
+		justify-content: center;
+	}
+	.btn-group-responsive .btn-primary {
+		flex: 1 1 0;
+		min-width: 0;
+		max-width: 100%;
+		text-align: center;
+		font-size: clamp(9px, 3.2vw, 12px);
+		padding: 8px 10px;
+		white-space: nowrap;
+	}
+	.btn-full-text {
+		display: none;
+	}
+}
+
 /* ===== RESUME BUTTON ===== */
 .btn-primary {
 	background: linear-gradient(135deg, #ffbf35, #e6a82a) !important;
@@ -705,7 +739,7 @@ td {
 	overflow: hidden;
 	text-transform: uppercase;
 	letter-spacing: clamp(0px, 0.2vw, 1px);
-	font-size: clamp(10px, 2.5vw, 14px);
+	font-size: clamp(11px, 1.8vw, 14px);
 	box-shadow: 0 4px 15px rgba(255, 191, 53, 0.3);
 }
 
@@ -1251,7 +1285,6 @@ td {
 		padding: 10px 20px;
 		font-size: 12px;
 		border-radius: 25px;
-		width: 100%;
 		text-align: center;
 	}
 
@@ -1295,7 +1328,6 @@ td {
 		padding: 8px 16px;
 		font-size: 11px;
 		border-radius: 20px;
-		width: 100%;
 		letter-spacing: 0.5px;
 	}
 
@@ -1403,7 +1435,6 @@ td {
 		padding: 6px 12px;
 		font-size: 10px;
 		border-radius: 15px;
-		width: 100%;
 		letter-spacing: 0px;
 	}
 
